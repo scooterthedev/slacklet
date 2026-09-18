@@ -1,0 +1,19 @@
+* text=auto eol=lf
+
+*.bat text eol=crlf
+
+gradlew text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.ttf binary
+*.otf binary
+*.jar binary
+*.keystore binary
+*.jks binary
+*.apk binary
+*.aab binary

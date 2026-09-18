@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!--
+          Debug-only development sign-in. Absent from release builds entirely - this file
+          is in the `debug` source set and is never merged into release.
+
+          It is exported because `adb shell` runs as a different uid and cannot deliver to
+          a non-exported receiver. That means any app on a debug device could in principle
+          trigger it, so it is only ever a development convenience: never install a debug
+          build on a device you care about.
+        -->
+        <receiver
+            android:name=".dev.DevSignInReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.scooter.slackwear.DEV_SIGN_IN" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Debug-only endpoint probe. See DevProbeReceiver. -->
+        <receiver
+            android:name=".dev.DevProbeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.scooter.slackwear.DEV_PROBE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Debug-only sidebar-section import. See DevSectionsReceiver. -->
+        <receiver
+            android:name=".dev.DevSectionsReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.scooter.slackwear.DEV_SECTIONS" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

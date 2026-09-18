@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      # :app is excluded because the Google Services plugin needs google-services.json,
+      # which is git-ignored. Every unit test in the project lives outside :app.
+      - name: Unit tests
+        run: |
+          ./gradlew --no-daemon \
+            :relay:test \
+            :core:model:test \
+            :core:data:testDebugUnitTest \
+            :core:network:testDebugUnitTest \
+            :core:database:testDebugUnitTest \
+            :feature:home:testDebugUnitTest \
+            :feature:conversation:testDebugUnitTest \
+            :feature:notifications:testDebugUnitTest \
+            :feature:search:testDebugUnitTest
+
+      - name: Coverage report
+        run: ./gradlew --no-daemon koverXmlReport koverHtmlReport
+
+      - name: Relay distribution
+        run: ./gradlew --no-daemon :relay:shadowJar
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: '**/build/reports/tests/'
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: build/reports/kover/

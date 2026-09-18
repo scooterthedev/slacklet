@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#5A1F5B" android:pathData="M50.9,18.56 L57.1,18.56 Q62.72,18.56 62.72,24.18 L62.72,28.13 Q62.72,33.75 57.1,33.75 L50.9,33.75 Q45.28,33.75 45.28,28.13 L45.28,24.18 Q45.28,18.56 50.9,18.56 Z" />
+    <path android:fillColor="#5A1F5B" android:pathData="M50.9,74.25 L57.1,74.25 Q62.72,74.25 62.72,79.87 L62.72,83.82 Q62.72,89.44 57.1,89.44 L50.9,89.44 Q45.28,89.44 45.28,83.82 L45.28,79.87 Q45.28,74.25 50.9,74.25 Z" />
+    <path android:fillColor="#4A154B" android:pathData="M25.88,54.0 A28.12,28.12 0 1,0 82.12,54.0 A28.12,28.12 0 1,0 25.88,54.0 Z" />
+    <path android:strokeColor="#8B4A8C" android:strokeWidth="1.41" android:pathData="M25.88,54.0 A28.12,28.12 0 1,0 82.12,54.0 A28.12,28.12 0 1,0 25.88,54.0 Z" />
+    <path android:fillColor="#1A1D21" android:pathData="M30.09,54.0 A23.91,23.91 0 1,0 77.91,54.0 A23.91,23.91 0 1,0 30.09,54.0 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M46.41,60.75 L46.41,70.59 L53.72,62.16 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M42.739999999999995,42.75 L65.25999999999999,42.75 Q70.88,42.75 70.88,48.37 L70.88,57.38 Q70.88,63.0 65.25999999999999,63.0 L42.739999999999995,63.0 Q37.12,63.0 37.12,57.38 L37.12,48.37 Q37.12,42.75 42.739999999999995,42.75 Z" />
+    <path android:fillColor="#4A154B" android:pathData="M51.38,46.69 L53.91,46.69 L51.28,59.06 L48.75,59.06 Z" />
+    <path android:fillColor="#4A154B" android:pathData="M56.72,46.69 L59.25,46.69 L56.62,59.06 L54.09,59.06 Z" />
+    <path android:fillColor="#4A154B" android:pathData="M48.03,49.22 L61.53,49.22 L60.99,51.75 L47.49,51.75 Z" />
+    <path android:fillColor="#4A154B" android:pathData="M47.01,54.0 L60.51,54.0 L59.97,56.53 L46.47,56.53 Z" />
+    <path android:fillColor="#E01E5A" android:strokeColor="#1A1D21" android:strokeWidth="1.69" android:pathData="M67.22,35.16 A5.62,5.62 0 1,0 78.46000000000001,35.16 A5.62,5.62 0 1,0 67.22,35.16 Z" />
+</vector>
